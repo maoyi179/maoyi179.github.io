@@ -522,8 +522,8 @@ header .go-back i {
 }
 
 .dream {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    /* margin-top: 20px;
+    margin-bottom: 40px; */
 }
 
 .dream .title,
@@ -535,8 +535,10 @@ header .go-back i {
 }
 
 .dream .text {
-    opacity: .6;
-    font-size: 1.1rem;
+    opacity: .8;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: '微软雅黑';
 }
 
 .music-player,
@@ -550,13 +552,10 @@ header .go-back i {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 10px 20px -12px rgba(0, 0, 0, .5) !important;
 }
 
-#recommend-sections {
-    margin-top: -30px;
-    padding-top: 30px;
-}
+#recommend-sections {}
 
 .index-card .card .card-content {
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
 }
 
 @media only screen and (min-width: 1418px) {
