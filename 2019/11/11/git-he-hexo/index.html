@@ -341,12 +341,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
-                            </a>
-                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                     </div>
@@ -392,8 +392,7 @@
 <li>是一个源代码管理工具</li>
 <li>让源代码可以被追溯，记录每次变更发生了什么，谁主导这些变化</li>
 </ul>
-<p>工作原理：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6784887-d3a98a81a81bd59c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>工作原理：<br><img src="/mdimages/Git%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8Chexo%E7%9A%84%E5%88%9B%E5%BB%BA/1.png" alt></p>
 <ul>
 <li><p>Workspace:工作区，执行<code>git add *</code>命令就把改动提交到了暂存区，执行<code>git pull</code>命令将远程仓库的数据拉到当前分支并合并，执行<code>git checkout [branch-name]</code>切换分支</p>
 </li>
@@ -510,16 +509,16 @@ $ git config [--global] user.email "[email address]"</code></pre>
 <li><p>更新仓库</p>
 </li>
 </ol>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假定我们创建好了一个远程仓库地址为：<a href="https://coding.net/u/zhangguo5/p/project7/git，现在我们在本地创建一个项目并同步到远程仓库中。" target="_blank" rel="noopener">https://coding.net/u/zhangguo5/p/project7/git，现在我们在本地创建一个项目并同步到远程仓库中。</a></p>
-<p>1）、创建文件添加到暂存区</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6784887-94635357f0041ae6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>2）、提交到本地仓库</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6784887-d78983bd58f0fc0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>3）、提交到远程仓库</p>
-<p>添加远程主机地址：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6784887-bb9a661846240b43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>推送文件：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6784887-eb2426387b8dfb8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>假定我们创建好了一个远程仓库，现在我们在本地创建一个项目并同步到远程仓库中。</p>
+<ol>
+<li>创建文件添加到暂存区 —— git add *</li>
+<li>提交到本地仓库 —— git commit -m “注释”</li>
+<li>提交到远程仓库<ul>
+<li>添加远程主机地址：—— git remote add origin 你的git路径</li>
+<li>推送文件：—— git push</li>
+</ul>
+</li>
+</ol>
 <h2 id="Git-常用命令集合"><a href="#Git-常用命令集合" class="headerlink" title="Git 常用命令集合"></a>Git 常用命令集合</h2><h3 id="基础命令-1"><a href="#基础命令-1" class="headerlink" title="基础命令"></a>基础命令</h3><pre><code># 添加指定文件到暂存区
 $ git add [file1] [file2] ...
 # 添加指定目录到暂存区，包括子目录
@@ -674,8 +673,7 @@ $ git blame filepath</code></pre><br>
 
 
 <h2 id="搭建个人博客"><a href="#搭建个人博客" class="headerlink" title="搭建个人博客"></a>搭建个人博客</h2><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p><code>npm install -g hexo-cli</code></p>
-<h3 id="第一步：创建仓库"><a href="#第一步：创建仓库" class="headerlink" title="第一步：创建仓库"></a>第一步：创建仓库</h3><p>进入github/bitbucket（后续都以github为例）新建repo，这里要注意repo的名字一定要满足<code>your Account Name</code>/github.io。如果是bitbucket那就是<code>your Account Name</code>/bitbucket.io，因为只有这样的仓库名称最后才能以静态页面展示。如图：XXX的内容一定要与红色的框里的文本一致。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/7/1616f33f4f1658c0?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<h3 id="第一步：创建仓库"><a href="#第一步：创建仓库" class="headerlink" title="第一步：创建仓库"></a>第一步：创建仓库</h3><p>进入github/bitbucket（后续都以github为例）新建repo，这里要注意repo的名字一定要满足<code>your Account Name</code>/github.io。如果是bitbucket那就是<code>your Account Name</code>/bitbucket.io，因为只有这样的仓库名称最后才能以静态页面展示。如图：XXX的内容一定要与红色的框里的文本一致。<br><img src="/mdimages/Git%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8Chexo%E7%9A%84%E5%88%9B%E5%BB%BA/2.png" alt></p>
 <h3 id="第二步：创建本地文件夹"><a href="#第二步：创建本地文件夹" class="headerlink" title="第二步：创建本地文件夹"></a>第二步：创建本地文件夹</h3><p>创建文件夹之后CD到你创建的文件夹中执行hexo的初始化相关命令</p>
 <pre><code>$ hexo init
 $ npm install</code></pre><p>执行完毕之后你的文件夹里就有内容了，标准的目录结构是这样（只列出几个必要的文件夹及其子目录）</p>
@@ -718,12 +716,10 @@ $ npm install</code></pre><p>执行完毕之后你的文件夹里就有内容了
 <p><strong>(调试完毕后记得 <code>control + C</code> 关闭本地端口，不然下次就进不去啦)</strong></p>
 <ul>
 <li><p>调试完毕后使用 <code>hexo deploy</code> 简写为 <code>hexo d</code>来部署到git服务器。</p>
-<p>执行完以上操作后打开浏览器地址了输入<code>http://你github名字.github.io</code>就可以看看到效果啦，这回是所有人都能看到的，用手机也可以。至此第三步已经完成,最终的结果如下图：</p>
+<p>执行完以上操作后打开浏览器地址了输入<code>http://你github名字.github.io</code>就可以看看到效果啦，这回是所有人都能看到的，用手机也可以。</p>
 </li>
 </ul>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/7/1616f33f7d058b60?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
-<h3 id="第四步：写文章"><a href="#第四步：写文章" class="headerlink" title="第四步：写文章"></a>第四步：写文章</h3><p>使用如下命令 <code>hexo new post “文章名字”</code> 就可新建文章啦，建立好的文章在 <code>source/_posts</code> 中，你可以用markdown语法编辑内容就可以。编辑完成后执行第三步中终端的操作就可以啦，刷新下浏览器就可看到你的新文章啦。如下图:</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/7/1616f33f8203089d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<h3 id="第四步：写文章"><a href="#第四步：写文章" class="headerlink" title="第四步：写文章"></a>第四步：写文章</h3><p>使用如下命令 <code>hexo new post “文章名字”</code> 就可新建文章啦，建立好的文章在 <code>source/_posts</code> 中，你可以用markdown语法编辑内容就可以。编辑完成后执行第三步中终端的操作就可以啦，刷新下浏览器就可看到你的新文章啦。</p>
 
             </div>
             <hr/>
@@ -802,31 +798,31 @@ $ npm install</code></pre><p>执行完毕之后你的文件夹里就有内容了
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/11/git-he-hexo/">
+                <a href="/2019/11/13/hexo-chang-jian-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="GIT的使用和hexo博客的创建">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="hexo常见问题总结">
                         
-                        <span class="card-title">GIT的使用和hexo博客的创建</span>
+                        <span class="card-title">hexo常见问题总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            GIT简介​    Git的诞生确实是一个有趣的故事，当年Linus创建了开源的Linux，从此，Linux系统不断发展，现在已经成为最大的服务器系统软件了。
-​    但是随着Linux的不断壮大，就需要各种版本控制了，起初Linus带着
+                            本编文章记载了作者在构建自己博客时遇到的一些问题
+hexo deploy上传图片不成功 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true
+markdown使用网络链接图,在博客上无法加载 
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -839,12 +835,11 @@ $ npm install</code></pre><p>执行完毕之后你的文件夹里就有内容了
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/问题总结/">
+                        <span class="chip bg-color">问题总结</span>
                     </a>
                     
                     <a href="/tags/Hexo/">
@@ -898,12 +893,12 @@ $ npm install</code></pre><p>执行完毕之后你的文件夹里就有内容了
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
