@@ -4,10 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo常见问题总结, 路过的M1">
-    <meta name="description" content="本编文章记载了作者在构建自己博客时遇到的一些问题
-hexo deploy上传图片不成功 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true
-markdown使用网络链接图,在博客上无法加载 ">
+    <meta name="keywords" content="乐居项目总结, 路过的M1">
+    <meta name="description" content="路由传递的数据获取,链接可不显示传值的方法之前一直都使用的是/xx/:id的路由方式传值,这种传值方式虽然能在路径上显示值,但是总会有不想显示传值的情况.在vue.js官网里查了下,果真有介绍了这种写法,以下是两种写法的展示:
+
+路径中带传">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@ markdown使用网络链接图,在博客上无法加载 ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>hexo常见问题总结 | 路过的M1</title>
+    <title>乐居项目总结 | 路过的M1</title>
     <link rel="icon" type="image/png" href="/decade.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -224,13 +224,13 @@ markdown使用网络链接图,在博客上无法加载 ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        hexo常见问题总结
+                        乐居项目总结
                     </div>
                 </div>
             </div>
@@ -346,8 +346,8 @@ markdown使用网络链接图,在博客上无法加载 ">
                                 <span class="chip bg-color">问题总结</span>
                             </a>
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/巩固/">
+                                <span class="chip bg-color">巩固</span>
                             </a>
                         
                     </div>
@@ -370,7 +370,7 @@ markdown使用网络链接图,在博客上无法加载 ">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-13
+                    2019-11-07
                 </div>
 
                 
@@ -386,9 +386,141 @@ markdown使用网络链接图,在博客上无法加载 ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本编文章记载了作者在构建自己博客时遇到的一些问题</p>
-<h2 id="hexo-deploy上传图片不成功"><a href="#hexo-deploy上传图片不成功" class="headerlink" title="hexo deploy上传图片不成功"></a>hexo deploy上传图片不成功</h2><p> 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</p>
-<h2 id="markdown使用网络链接图-在博客上无法加载"><a href="#markdown使用网络链接图-在博客上无法加载" class="headerlink" title="markdown使用网络链接图,在博客上无法加载"></a>markdown使用网络链接图,在博客上无法加载</h2><p> 将网络链接图下载下来放在<code>themes--source</code>内,markdown中图片链接改成<code>![](source下的相对路径)</code>即可<br> 比如 : 图片<code>1.png</code>保存在source下的<code>imgs</code>文件夹下,则markdown中图片链接改成<code>![](/imgs/1.png)</code></p>
+                <h2 id="路由传递的数据获取-链接可不显示传值的方法"><a href="#路由传递的数据获取-链接可不显示传值的方法" class="headerlink" title="路由传递的数据获取,链接可不显示传值的方法"></a>路由传递的数据获取,链接可不显示传值的方法</h2><p>之前一直都使用的是<code>/xx/:id</code>的路由方式传值,这种传值方式虽然能在路径上显示值,但是总会有不想显示传值的情况.在vue.js官网里查了下,果真有介绍了这种写法,以下是两种写法的展示:</p>
+<ol>
+<li><p>路径中带传值的方式:</p>
+<ul>
+<li>Router.js:<pre class=" language-js"><code class="language-js"> <span class="token punctuation">{</span>
+         <span class="token comment" spellcheck="true">// 动态路由/:传递的值</span>
+         path<span class="token punctuation">:</span> <span class="token string">'/info/:id'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//获取 this.$route.params.id</span>
+         component<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/information/information'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+         meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+             isshow<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span></code></pre>
+</li>
+<li>任意传值页面:<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">tag</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>div<span class="token punctuation">"</span></span> <span class="token attr-name">:to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>`/info/${ id }`<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li>接收页面:<pre class=" language-js"><code class="language-js"> <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>路劲中不带传值的方式：(也是通过params,但不用在路由里写:id)</p>
+<ul>
+<li>任意传值页面：(name就是路劲对应的名称)<pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span> <span class="token attr-name">tag</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>div<span class="token punctuation">"</span></span>  <span class="token attr-name">:to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{name:<span class="token punctuation">'</span>myorder<span class="token punctuation">'</span>,params:{status:<span class="token punctuation">'</span>fin<span class="token punctuation">'</span>}}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-link</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li>接收页面:<pre class=" language-js"><code class="language-js">   <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>nowstatus <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>status<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<br>
+<br>
+
+
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="在操作DOM时获取VUE实例"><a href="#在操作DOM时获取VUE实例" class="headerlink" title="在操作DOM时获取VUE实例"></a>在操作DOM时获取VUE实例</h2><p>虽然Vue是不推荐在vue中操作DOM的,但是有的时候第一思路就是操作DOM,这种时候就会遇到一些问题,在操作DOM时经常会用到this,这样就会与vue实例的this冲突。<br>那有什么解决方法呢?我一般是在方法之前<code>var vm = this</code>,声明一个变量代替vue实例的this</p>
+<br>
+<br>
+
+
+<h2 id="消除a标签点击时出现的蓝色块"><a href="#消除a标签点击时出现的蓝色块" class="headerlink" title="消除a标签点击时出现的蓝色块"></a>消除a标签点击时出现的蓝色块</h2><pre class=" language-css"><code class="language-css">// 消除点击时蓝色
+<span class="token property">-webkit-tap-highlight-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span></code></pre>
+<br>
+<br>
+
+<h2 id="css代码穿透和加权"><a href="#css代码穿透和加权" class="headerlink" title="css代码穿透和加权"></a>css代码穿透和加权</h2><p>由于vue中css通常用scoped让css仅对当前页面生效,这时在使用swiper等插件的时候,想要修改样式,需要使用代码穿透</p>
+<ul>
+<li>代码穿透<code>::v-deep</code>:<pre class=" language-css"><code class="language-css"><span class="token selector">// 穿透
+<span class="token pseudo-element">::v-deep</span> <span class="token class">.swiper-pagination</span> </span><span class="token punctuation">{</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+<li>加权<code>!important</code>:<pre class=" language-css"><code class="language-css"><span class="token selector">div</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span><span class="token hexcode">#f00</span>!important<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<br>
+<br>
+
+<h2 id="xa0代表空格"><a href="#xa0代表空格" class="headerlink" title="\xa0代表空格"></a><code>\xa0</code>代表空格</h2><p>在自己做数据的时候,遇到数据中夹杂着空格的情况,一开始使用<code>&amp;nbsp;</code>来写的,但发现在页面上被当成了字符串直接显示,没有解析成空格.在网上搜索了资料后,用<code>\xa0</code>来表示空格,在页面上成功显示.</p>
+<br>
+<br>
+
+<h2 id="图片资源宽高差1-3px-导致flex排版不对齐"><a href="#图片资源宽高差1-3px-导致flex排版不对齐" class="headerlink" title="图片资源宽高差1-3px,导致flex排版不对齐"></a>图片资源宽高差1-3px,导致flex排版不对齐</h2><p>解决方法: 给图片添加一个固定宽高的外部盒子,这样就可以无论图片大小,都是排版外部盒子的.</p>
+<br>
+<br>
+
+<h2 id="JSON转字符串转对象"><a href="#JSON转字符串转对象" class="headerlink" title="JSON转字符串转对象"></a>JSON转字符串转对象</h2><ul>
+<li>转字符串:<code>JSON.stringify()</code></li>
+<li>转JS对象: <code>JSON.parse()</code></li>
+</ul>
+<br>
+<br>
+
+<h2 id="vue在APP里添加页面切换动画"><a href="#vue在APP里添加页面切换动画" class="headerlink" title="vue在APP里添加页面切换动画"></a>vue在APP里添加页面切换动画</h2><pre class=" language-html"><code class="language-html"> <span class="token comment" spellcheck="true">&lt;!-- 切换路由的动画效果 --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>transition</span> <span class="token attr-name">:name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>transitionName<span class="token punctuation">"</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>out-in<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>transition</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 监听路由路径的变化</span>
+watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token function">$route</span><span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 设定需要判断动画的路径</span>
+    <span class="token comment" spellcheck="true">//一级路由</span>
+    <span class="token keyword">const</span> tabPath <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"/home"</span><span class="token punctuation">,</span> <span class="token string">"/search"</span><span class="token punctuation">,</span> <span class="token string">"/my"</span><span class="token punctuation">,</span> <span class="token string">"/login"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      tabPath<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> item <span class="token operator">==</span> to<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+      tabPath<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> item <span class="token operator">==</span> <span class="token keyword">from</span><span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>transitionName <span class="token operator">=</span> <span class="token string">"fade"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// console.log('to.path',to.path)</span>
+      <span class="token comment" spellcheck="true">// 判断二级</span>
+      <span class="token keyword">const</span> toDepth <span class="token operator">=</span> to<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> fromDepth <span class="token operator">=</span> <span class="token keyword">from</span><span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>transitionName <span class="token operator">=</span>
+        toDepth <span class="token operator">&lt;</span> fromDepth <span class="token operator">?</span> <span class="token string">"slide-right"</span> <span class="token punctuation">:</span> <span class="token string">"slide-left"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector">// 动画区域
+<span class="token class">.slide-left-enter-active</span> </span><span class="token punctuation">{</span>
+  <span class="token property">animation</span><span class="token punctuation">:</span> slideLeft <span class="token number">0.8</span>s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.slide-right-enter-active</span> </span><span class="token punctuation">{</span>
+  <span class="token property">animation</span><span class="token punctuation">:</span> slideRight <span class="token number">0.8</span>s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.fade-enter-active</span> </span><span class="token punctuation">{</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> all ease <span class="token number">0.4</span>s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.fade-enter</span> </span><span class="token punctuation">{</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> slideLeft</span> <span class="token punctuation">{</span>
+  <span class="token selector">0% </span><span class="token punctuation">{</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">100% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> slideRight</span> <span class="token punctuation">{</span>
+  <span class="token selector">0% </span><span class="token punctuation">{</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-<span class="token number">100%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">100% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
@@ -425,8 +557,8 @@ markdown使用网络链接图,在博客上无法加载 ">
                 </a>
             </div>
             <br/>
-            <a  href="/2019/11/13/hexo-chang-jian-wen-ti/">
-                    《hexo常见问题总结》
+            <a  href="/2019/11/07/le-ju-xiang-mu-zong-jie/">
+                    《乐居项目总结》
             </a> 由
             <a href="https://github.com/YY-mao/YY-mao.github.io">
                 路过的M1
@@ -467,32 +599,30 @@ markdown使用网络链接图,在博客上无法加载 ">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/13/flex-chang-jian-bu-ju-wen-ti-zong-jie/">
+                <a href="/2019/11/07/le-ju-xiang-mu-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Flex常见布局问题总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="乐居项目总结">
                         
-                        <span class="card-title">Flex常见布局问题总结</span>
+                        <span class="card-title">乐居项目总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本编文章记载了作者在使用Flex布局时遇到的一些问题
-flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex布局,但是最后一行在列不满的情况下不能左对齐的问题,就是图示问题:
-在网上搜索了很多资料,总结了下几种解决方案:
-添加
+                            最近自己做了一个小项目,记录下过程中遇到的卡壳或者常见的问题.
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -505,15 +635,16 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Flex/">
-                        <span class="chip bg-color">Flex</span>
-                    </a>
-                    
                     <a href="/tags/问题总结/">
                         <span class="chip bg-color">问题总结</span>
+                    </a>
+                    
+                    <a href="/tags/巩固/">
+                        <span class="chip bg-color">巩固</span>
                     </a>
                     
                 </div>
@@ -527,25 +658,24 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/11/git-he-hexo/">
+                <a href="/2019/11/03/vue-cli-xiang-mu-gong-lue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="GIT的使用和hexo博客的创建">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="vue-cil项目攻略">
                         
-                        <span class="card-title">GIT的使用和hexo博客的创建</span>
+                        <span class="card-title">vue-cil项目攻略</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            GIT简介​    Git的诞生确实是一个有趣的故事，当年Linus创建了开源的Linux，从此，Linux系统不断发展，现在已经成为最大的服务器系统软件了。
-​    但是随着Linux的不断壮大，就需要各种版本控制了，起初Linus带着
+                            这是博主在学习vue-cil时总结的学习笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-03
                             </span>
                         <span class="publish-author">
                             
@@ -562,12 +692,8 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/学习笔记/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>

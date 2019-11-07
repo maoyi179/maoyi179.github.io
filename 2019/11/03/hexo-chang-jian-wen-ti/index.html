@@ -4,11 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Flex常见布局问题总结, 路过的M1">
-    <meta name="description" content="本编文章记载了作者在使用Flex布局时遇到的一些问题
-flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex布局,但是最后一行在列不满的情况下不能左对齐的问题,就是图示问题:
-在网上搜索了很多资料,总结了下几种解决方案:
-添加">
+    <meta name="keywords" content="hexo常见问题总结, 路过的M1">
+    <meta name="description" content="本编文章记载了作者在构建自己博客时遇到的一些问题
+hexo deploy上传图片不成功 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true
+markdown使用网络链接图,在博客上无法加载 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +15,7 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Flex常见布局问题总结 | 路过的M1</title>
+    <title>hexo常见问题总结 | 路过的M1</title>
     <link rel="icon" type="image/png" href="/decade.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,13 +224,13 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Flex常见布局问题总结
+                        hexo常见问题总结
                     </div>
                 </div>
             </div>
@@ -343,12 +342,12 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Flex/">
-                                <span class="chip bg-color">Flex</span>
-                            </a>
-                        
                             <a href="/tags/问题总结/">
                                 <span class="chip bg-color">问题总结</span>
+                            </a>
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
                             </a>
                         
                     </div>
@@ -371,7 +370,7 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-13
+                    2019-11-03
                 </div>
 
                 
@@ -387,58 +386,9 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本编文章记载了作者在使用Flex布局时遇到的一些问题</p>
-<h2 id="flex排版-最后一行-左对齐"><a href="#flex排版-最后一行-左对齐" class="headerlink" title="flex排版 最后一行 左对齐"></a>flex排版 最后一行 左对齐</h2><p>在日常的使用中,我们常常会遇到flex布局,但是最后一行在列不满的情况下不能左对齐的问题,就是图示问题:<img src="/mdimages/Flex%E5%B8%83%E5%B1%80%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/1.png" alt></p>
-<h4 id="在网上搜索了很多资料-总结了下几种解决方案"><a href="#在网上搜索了很多资料-总结了下几种解决方案" class="headerlink" title="在网上搜索了很多资料,总结了下几种解决方案:"></a>在网上搜索了很多资料,总结了下几种解决方案:</h4><ol>
-<li>添加空的盒子填满最后一行</li>
-</ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
-  <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">32%</span><span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#00abff</span><span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
-    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token selector"><span class="token class">.itemempty</span> </span><span class="token punctuation">{</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">32%</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
-    <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- 添加空盒子 --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>itemempty<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>itemempty<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>itemempty<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
-<ol start="2">
-<li>用父盒子伪元素<code>flex:auto</code>的方式</li>
-</ol>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span><span class="token pseudo-element">:after</span> </span><span class="token punctuation">{</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token property">flex</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
- <span class="token punctuation">}</span></code></pre>
-<p>最终显示结果:<img src="/mdimages/Flex%E5%B8%83%E5%B1%80%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/2.png" alt></p>
+                <p>本编文章记载了作者在构建自己博客时遇到的一些问题</p>
+<h2 id="hexo-deploy上传图片不成功"><a href="#hexo-deploy上传图片不成功" class="headerlink" title="hexo deploy上传图片不成功"></a>hexo deploy上传图片不成功</h2><p> 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</p>
+<h2 id="markdown使用网络链接图-在博客上无法加载"><a href="#markdown使用网络链接图-在博客上无法加载" class="headerlink" title="markdown使用网络链接图,在博客上无法加载"></a>markdown使用网络链接图,在博客上无法加载</h2><p> 将网络链接图下载下来放在<code>themes--source</code>内,markdown中图片链接改成<code>![](source下的相对路径)</code>即可<br> 比如 : 图片<code>1.png</code>保存在source下的<code>imgs</code>文件夹下,则markdown中图片链接改成<code>![](/imgs/1.png)</code></p>
 
             </div>
             <hr/>
@@ -475,8 +425,8 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
                 </a>
             </div>
             <br/>
-            <a  href="/2019/11/13/flex-chang-jian-bu-ju-wen-ti-zong-jie/">
-                    《Flex常见布局问题总结》
+            <a  href="/2019/11/03/hexo-chang-jian-wen-ti/">
+                    《hexo常见问题总结》
             </a> 由
             <a href="https://github.com/YY-mao/YY-mao.github.io">
                 路过的M1
@@ -521,24 +471,25 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/13/zong-jie-zi-fu-chuan-he-shu-zu-de-fang-fa/">
+                <a href="/2019/11/03/flex-chang-jian-bu-ju-wen-ti-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="总结-字符串和数组的方法">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Flex常见布局问题总结">
                         
-                        <span class="card-title">总结-字符串和数组的方法</span>
+                        <span class="card-title">Flex常见布局问题总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是博主对字符串和数组常用方法的总结，包含了ES6的内容。
+                            本编文章记载了作者在使用Flex布局时遇到的一些问题
+中间部分始终居中在框架中,我们经常会用到组件.比如说在vue中的组件,我们经常会因为不同页面不同情况而写插槽,这就会导致flex布局只排版插槽外的盒子.举个例子:一个头部组件,正常情况是
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-03
                         </span>
                         <span class="publish-author">
                             
@@ -555,8 +506,12 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习笔记/">
-                        <span class="chip bg-color">学习笔记</span>
+                    <a href="/tags/Flex/">
+                        <span class="chip bg-color">Flex</span>
+                    </a>
+                    
+                    <a href="/tags/问题总结/">
+                        <span class="chip bg-color">问题总结</span>
                     </a>
                     
                 </div>
@@ -570,26 +525,25 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/13/hexo-chang-jian-wen-ti/">
+                <a href="/2019/11/02/git-he-hexo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="hexo常见问题总结">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="GIT的使用和hexo博客的创建">
                         
-                        <span class="card-title">hexo常见问题总结</span>
+                        <span class="card-title">GIT的使用和hexo博客的创建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本编文章记载了作者在构建自己博客时遇到的一些问题
-hexo deploy上传图片不成功 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true
-markdown使用网络链接图,在博客上无法加载 
+                            GIT简介​    Git的诞生确实是一个有趣的故事，当年Linus创建了开源的Linux，从此，Linux系统不断发展，现在已经成为最大的服务器系统软件了。
+​    但是随着Linux的不断壮大，就需要各种版本控制了，起初Linus带着
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
                             </span>
                         <span class="publish-author">
                             
@@ -606,12 +560,12 @@ markdown使用网络链接图,在博客上无法加载
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/问题总结/">
-                        <span class="chip bg-color">问题总结</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>

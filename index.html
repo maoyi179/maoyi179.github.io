@@ -367,13 +367,11 @@
                     <div class="description center-align">
                     
                         本编文章记载了作者在使用Flex布局时遇到的一些问题
-flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex布局,但是最后一行在列不满的情况下不能左对齐的问题,就是图示问题:
-在网上搜索了很多资料,总结了下几种解决方案:
-添加
+中间部分始终居中在框架中,我们经常会用到组件.比如说在vue中的组件,我们经常会因为不同页面不同情况而写插槽,这就会导致flex布局只排版插槽外的盒子.举个例子:一个头部组件,正常情况是
                     
                     </div>
                     <div class="cover-btns">
-                        <a href="/2019/11/13/flex-chang-jian-bu-ju-wen-ti-zong-jie/" class="waves-effect waves-light btn" target="_blank">
+                        <a href="/2019/11/03/flex-chang-jian-bu-ju-wen-ti-zong-jie/" class="waves-effect waves-light btn" target="_blank">
                             <i class="icon far fa-eye fa-fw"></i>阅读更多
                         </a>
                     </div>
@@ -397,7 +395,29 @@ markdown使用网络链接图,在博客上无法加载
                     
                     </div>
                     <div class="cover-btns">
-                        <a href="/2019/11/13/hexo-chang-jian-wen-ti/" class="waves-effect waves-light btn" target="_blank">
+                        <a href="/2019/11/03/hexo-chang-jian-wen-ti/" class="waves-effect waves-light btn" target="_blank">
+                            <i class="icon far fa-eye fa-fw"></i>阅读更多
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="carousel-item amber white-text carousel-post bg-cover"
+            style="background-image: url('/medias/featureimages/4.jpg');">
+        <div class="container" style="right: 0px;left: 0px;">
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <div class="title center-align">乐居项目总结</div>
+                    <div class="description center-align">
+                    
+                        最近自己做了一个小项目,记录下过程中遇到的卡壳或者常见的问题.
+                    
+                    </div>
+                    <div class="cover-btns">
+                        <a href="/2019/11/07/le-ju-xiang-mu-zong-jie/" class="waves-effect waves-light btn" target="_blank">
                             <i class="icon far fa-eye fa-fw"></i>阅读更多
                         </a>
                     </div>
@@ -419,7 +439,7 @@ markdown使用网络链接图,在博客上无法加载
                     
                     </div>
                     <div class="cover-btns">
-                        <a href="/2019/11/13/vue-cli-xiang-mu-gong-lue/" class="waves-effect waves-light btn" target="_blank">
+                        <a href="/2019/11/03/vue-cli-xiang-mu-gong-lue/" class="waves-effect waves-light btn" target="_blank">
                             <i class="icon far fa-eye fa-fw"></i>阅读更多
                         </a>
                     </div>
@@ -442,7 +462,7 @@ markdown使用网络链接图,在博客上无法加载
                     
                     </div>
                     <div class="cover-btns">
-                        <a href="/2019/11/11/git-he-hexo/" class="waves-effect waves-light btn" target="_blank">
+                        <a href="/2019/11/02/git-he-hexo/" class="waves-effect waves-light btn" target="_blank">
                             <i class="icon far fa-eye fa-fw"></i>阅读更多
                         </a>
                     </div>
@@ -464,7 +484,7 @@ markdown使用网络链接图,在博客上无法加载
                     
                     </div>
                     <div class="cover-btns">
-                        <a href="/2019/11/13/zong-jie-zi-fu-chuan-he-shu-zu-de-fang-fa/" class="waves-effect waves-light btn" target="_blank">
+                        <a href="/2019/11/03/zong-jie-zi-fu-chuan-he-shu-zu-de-fang-fa/" class="waves-effect waves-light btn" target="_blank">
                             <i class="icon far fa-eye fa-fw"></i>阅读更多
                         </a>
                     </div>
@@ -546,6 +566,37 @@ $(function () {
 
 
 
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
+
+<div class="row">
+
+    
+    
+    <div class="col s12" >
+        <div class="post-card" style="background-image: url('/medias/featureimages/4.jpg')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                    <a href="/categories/2019/" class="category">2019</a>
+                    
+                </div>
+                <a href="/2019/11/07/le-ju-xiang-mu-zong-jie/">
+                    <h3 class="post-title">乐居项目总结</h3>
+                </a>
+                <p class="post-description">最近自己做了一个小项目,记录下过程中遇到的卡壳或者常见的问题.</p>
+                <a href="/2019/11/07/le-ju-xiang-mu-zong-jie/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
                     </div>
                 </div>
             </div>
@@ -561,7 +612,58 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/13/vue-cli-xiang-mu-gong-lue/">
+                    <a href="/2019/11/07/le-ju-xiang-mu-zong-jie/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="乐居项目总结">
+                            
+                            <span class="card-title">乐居项目总结</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                最近自己做了一个小项目,记录下过程中遇到的卡壳或者常见的问题.
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/2019/" class="post-category">
+                                    2019
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/问题总结/">
+                            <span class="chip bg-color">问题总结</span>
+                        </a>
+                        
+                        <a href="/tags/巩固/">
+                            <span class="chip bg-color">巩固</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/11/03/vue-cli-xiang-mu-gong-lue/">
                         <div class="card-image">
                             
                             
@@ -579,7 +681,7 @@ $(function () {
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-03
                             </span>
                             <span class="publish-author">
                                 
@@ -608,7 +710,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/13/zong-jie-zi-fu-chuan-he-shu-zu-de-fang-fa/">
+                    <a href="/2019/11/03/zong-jie-zi-fu-chuan-he-shu-zu-de-fang-fa/">
                         <div class="card-image">
                             
                             
@@ -626,7 +728,7 @@ $(function () {
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-03
                             </span>
                             <span class="publish-author">
                                 
@@ -655,7 +757,7 @@ $(function () {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/13/flex-chang-jian-bu-ju-wen-ti-zong-jie/">
+                    <a href="/2019/11/03/flex-chang-jian-bu-ju-wen-ti-zong-jie/">
                         <div class="card-image">
                             
                             
@@ -669,14 +771,12 @@ $(function () {
                         <div class="summary block-with-text">
                             
                                 本编文章记载了作者在使用Flex布局时遇到的一些问题
-flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex布局,但是最后一行在列不满的情况下不能左对齐的问题,就是图示问题:
-在网上搜索了很多资料,总结了下几种解决方案:
-添加
+中间部分始终居中在框架中,我们经常会用到组件.比如说在vue中的组件,我们经常会因为不同页面不同情况而写插槽,这就会导致flex布局只排版插槽外的盒子.举个例子:一个头部组件,正常情况是
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-03
                             </span>
                             <span class="publish-author">
                                 
@@ -709,7 +809,7 @@ flex排版 最后一行 左对齐在日常的使用中,我们常常会遇到flex
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/13/hexo-chang-jian-wen-ti/">
+                    <a href="/2019/11/03/hexo-chang-jian-wen-ti/">
                         <div class="card-image">
                             
                             
@@ -729,7 +829,7 @@ markdown使用网络链接图,在博客上无法加载
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-03
                             </span>
                             <span class="publish-author">
                                 
@@ -762,7 +862,7 @@ markdown使用网络链接图,在博客上无法加载
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/11/git-he-hexo/">
+                    <a href="/2019/11/02/git-he-hexo/">
                         <div class="card-image">
                             
                             
@@ -781,7 +881,7 @@ markdown使用网络链接图,在博客上无法加载
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
                             </span>
                             <span class="publish-author">
                                 
