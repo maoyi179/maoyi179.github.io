@@ -5,9 +5,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="乐居项目总结, 路过的M1">
-    <meta name="description" content="路由传递的数据获取,链接可不显示传值的方法之前一直都使用的是/xx/:id的路由方式传值,这种传值方式虽然能在路径上显示值,但是总会有不想显示传值的情况.在vue.js官网里查了下,果真有介绍了这种写法,以下是两种写法的展示:
+    <meta name="description" content="swiper 滑动时报错在chrome浏览器中,swiper滑动测试时会报一个这种错误在网上搜索了下,大概的原因就是chrome为了让浏览器能更快,给这个preventDefault返回了naive，不再是清除浏览器默认行为了.
 
-路径中带传">
+搜来搜去">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -386,7 +386,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="路由传递的数据获取-链接可不显示传值的方法"><a href="#路由传递的数据获取-链接可不显示传值的方法" class="headerlink" title="路由传递的数据获取,链接可不显示传值的方法"></a>路由传递的数据获取,链接可不显示传值的方法</h2><p>之前一直都使用的是<code>/xx/:id</code>的路由方式传值,这种传值方式虽然能在路径上显示值,但是总会有不想显示传值的情况.在vue.js官网里查了下,果真有介绍了这种写法,以下是两种写法的展示:</p>
+                <h2 id="swiper-滑动时报错"><a href="#swiper-滑动时报错" class="headerlink" title="swiper 滑动时报错"></a>swiper 滑动时报错</h2><p>在chrome浏览器中,swiper滑动测试时会报一个这种错误<img src="/mdimages/%E4%B9%90%E5%B1%85%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/1.jpg" alt><br>在网上搜索了下,大概的原因就是chrome为了让浏览器能更快,给这个preventDefault返回了naive，不再是清除浏览器默认行为了.</p>
+<ul>
+<li>搜来搜去,网上的解决方法大都是在css全局添加一个<code>touch-action:none</code>.这种方式确实可以解决报错问题,但出现了另一个问题,在移动端情况下,无法上下滑动.(实测,滚轮滑动可以,但触摸滑动不生效.)</li>
+<li>后来在github上swiper的交流区上,终于找到了合适的方法:<br>在头部标签上添加<code>ontouchstart</code>属性<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ontouchstart</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+<br>
+<br>
+
+<h2 id="路由传递的数据获取-链接可不显示传值的方法"><a href="#路由传递的数据获取-链接可不显示传值的方法" class="headerlink" title="路由传递的数据获取,链接可不显示传值的方法"></a>路由传递的数据获取,链接可不显示传值的方法</h2><p>之前一直都使用的是<code>/xx/:id</code>的路由方式传值,这种传值方式虽然能在路径上显示值,但是总会有不想显示传值的情况.在vue.js官网里查了下,果真有介绍了这种写法,以下是两种写法的展示:</p>
 <ol>
 <li><p>路径中带传值的方式:</p>
 <ul>
